@@ -1,8 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
-import { Container, Typography, Button } from '@mui/material';
+"use client";
+import React from "react";
+import Link from "next/link";
+import { Container, Typography, Button } from "@mui/material";
 
-const NotFound = () => {
+export default function NotFound() {
   return (
     <Container className="flex flex-col items-center mt-16 justify-center">
       <Typography variant="h2" component="h1" gutterBottom>
@@ -21,9 +22,4 @@ const NotFound = () => {
       </div>
     </Container>
   );
-};
-
-export default NotFound;
-// export default function Custom404() {
-//   return <h1>404 - Page Not Found</h1>
-// }
+}
