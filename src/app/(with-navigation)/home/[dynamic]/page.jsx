@@ -25,7 +25,7 @@ const Dynamic = () => {
 
   return (
     <div className=" flex items-center justify-center">
-      <CustomButton onClick={handleDialogOpen} children={"Open Pop"} />
+      <CustomButton onClick={handleDialogOpen}> Open Pop </CustomButton>
       <Dialog open={isDialogOpen} onClose={handleDialogClose}>
         <DialogTitle>Dynamic Content</DialogTitle>
         <DialogContent>
