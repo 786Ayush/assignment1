@@ -23,14 +23,17 @@ const Signup = () => {
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-6">
           <div>
-            <label htmlFor="name" className="sr-only">
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700"
+            >
               Name
             </label>
             <input
               id="name"
               type="text"
               {...register("name", { required: "Name is required" })}
-              className="w-full p-0.75rem border border-default rounded transition border-opacity-0 hover:border-opacity-100 focus:border-opacity-100 focus:border-focus focus:outline-none"
+              className="w-full p-3 border border-default rounded transition border-opacity-0 hover:border-opacity-100 focus:border-opacity-100 focus:border-focus focus:outline-none"
               placeholder="Name"
             />
             {errors.name && (
@@ -38,7 +41,10 @@ const Signup = () => {
             )}
           </div>
           <div>
-            <label htmlFor="email" className="sr-only">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
               Email Address
             </label>
             <input
@@ -51,7 +57,7 @@ const Signup = () => {
                   message: "Invalid email address",
                 },
               })}
-              className="w-full p-0.75rem border border-default rounded transition border-opacity-0 hover:border-opacity-100 focus:border-opacity-100 focus:border-focus focus:outline-none"
+              className="w-full p-3 border border-default rounded transition border-opacity-0 hover:border-opacity-100 focus:border-opacity-100 focus:border-focus focus:outline-none"
               placeholder="Email Address"
             />
             {errors.email && (
@@ -59,7 +65,10 @@ const Signup = () => {
             )}
           </div>
           <div>
-            <label htmlFor="phone" className="sr-only">
+            <label
+              htmlFor="phone"
+              className="block text-sm font-medium text-gray-700"
+            >
               Phone Number
             </label>
             <input
@@ -72,13 +81,14 @@ const Signup = () => {
                   message: "Invalid phone number (10 digits)",
                 },
               })}
-              className="w-full p-0.75rem border border-default rounded transition border-opacity-0 hover:border-opacity-100 focus:border-opacity-100 focus:border-focus focus:outline-none"
+              className="w-full p-3 border border-default rounded transition border-opacity-0 hover:border-opacity-100 focus:border-opacity-100 focus:border-focus focus:outline-none"
               placeholder="Phone Number"
             />
             {errors.phone && (
               <p className="mt-2 text-red-500">{errors.phone.message}</p>
             )}
           </div>
+
           <button
             type="submit"
             className="mt-4 w-full px-4 py-2 text-base font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
